@@ -16,7 +16,7 @@ def calcul():
 	user = e.get()
 
 	if user == str(gen_numb):
-		result.config(text=f"👏🏻 {user}", fg="#09EE73", font=(2))
+		result.config(text=f"👏🏻 {user}", fg="#09EE73")
 		generate()
 
 	else:
@@ -58,12 +58,12 @@ e.pack()
 result = Label(root, text=" ")
 result.pack(expand=YES)
 
-##### Button ##### 
+##### Button #####
 
-valid = Button(frame_right, text="Valider", fg="#09EE73", command=calcul)
-valid.pack()
 gen = Button(frame_right, text="  ↻  ", fg="#0035FE", font=(2), command=generate)
 gen.pack()
+valid = Button(frame_right, text="Valider", fg="#09EE73", command=calcul)
+valid.pack()
 note = Button(frame_left, text="fiche", fg="#FE7E00")
 note.pack()
 
