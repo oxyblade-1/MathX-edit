@@ -8,6 +8,7 @@ root = Tk()
 root.geometry("300x100")
 root.title("MathX")
 root.resizable(width=False, height=False)
+root.iconbitmap('mathx.ico')
 
 
 ##### Function #####
