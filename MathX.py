@@ -10,6 +10,11 @@ root.title("MathX")
 root.resizable(width=False, height=False)
 root.iconbitmap('mathx.ico')
 
+##### TITLE #####
+
+title = Label(root, text="MathX training", font=(2), fg="blue")
+title.pack(side=TOP)
+
 ##### Function #####
 
 def calcul():
@@ -29,6 +34,11 @@ def generate():
 	b = randint(1, 9)
 	gen_numb = a * b
 	cal.config(text=f"{a}*{b}")
+
+def chrono():
+
+	#code chrono
+
 
 def fiche():
 
@@ -61,8 +71,8 @@ frame_right.pack(side=RIGHT)
 
 ##### Label ##### 
 
-title = Label(root, text="MathX training", font=(2))
-title.pack(side=TOP)
+time = Label(frame_left, text=" ")
+time.pack(side=TOP)
 version = Label(frame_left, text="v1.0", fg="red")
 version.pack(side=TOP)
 cal = Label(root, text="Calcul")
