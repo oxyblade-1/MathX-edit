@@ -10,7 +10,6 @@ root.title("MathX")
 root.resizable(width=False, height=False)
 root.iconbitmap('mathx.ico')
 
-
 ##### Function #####
 
 def calcul():
@@ -31,6 +30,26 @@ def generate():
 	gen_numb = a * b
 	cal.config(text=f"{a}*{b}")
 
+def fiche():
+
+	##### config 2e windows #####
+
+	rev = Toplevel()
+	rev.geometry("1024x756")
+	rev.title('Fiche')
+	rev.iconbitmap('mathx.ico')
+	rev.resizable(width=False, height=False)
+
+	##### Font #####
+
+	table = Image.open("asset/table.png")
+	resize_table = table.resize((1024, 756), Image.ANTIALIAS)
+	new_table = ImageTk.PhotoImage(resize_table)
+
+	tablefont = Label(rev, image=new_table, borderwidth=0)
+	tablefont.pack()
+
+	rev.mainloop()
 
 ##### Frame #####
 
@@ -65,7 +84,7 @@ gen = Button(frame_right, text="  ↻  ", fg="#0035FE", font=(2), command=genera
 gen.pack()
 valid = Button(frame_right, text="Valider", fg="#09EE73", command=calcul)
 valid.pack()
-note = Button(frame_left, text="fiche", fg="#FE7E00")
+note = Button(frame_left, text="fiche", fg="#FE7E00", command=fiche)
 note.pack()
 
 root.mainloop()
